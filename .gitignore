@@ -9,3 +9,4 @@ log/
 /compile-extensions
 *.gitignore~
 *.gitmodules~
+/node_modules/
