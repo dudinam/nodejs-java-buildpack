@@ -2,9 +2,9 @@ install_java() {
   local version="$1"
   local dir="$2"
   
-  local download_url="http://download.oracle.com/otn-pub/java/jdk/8u73-b02/jdk-8u73-linux-x64.tar.gz"
+  local download_url="http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java/jdk-8u74-linux-x64.tar.gz"
   echo "Downloading JAVA [$download_url]"
-  curl  --silent --fail --retry 5 --retry-max-time 15 -v -j -k -L -H -b "Cookie: oraclelicense=accept-securebackup-cookie" "$download_url" -o /tmp/java.tar.gz || (echo "Unable to download java; does it exist?" && false)
+  curl  --silent --fail --retry 5 --retry-max-time 15 -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" "$download_url" -o /tmp/java.tar.gz || (echo "Unable to download java; does it exist?" && false)
   echo "Download complete!"
 
   echo "Installing JAVA"
